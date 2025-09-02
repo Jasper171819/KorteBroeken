@@ -1,0 +1,10 @@
+﻿@model (int temperatuur, int regenkans)
+
+@{
+    ViewData["Title"] = "Weerbericht";
+}
+
+<h1>@ViewData["Title"]</h1>
+<p>Temperatuur: @Model.temperatuur °C</p>
+<p>Regenkans: @Model.regenkans %</p>
+<p>@(Model.temperatuur > 20 && Model.regenkans < 50 ? "Ja!" : "Nee, helaas.")</p>
